@@ -1,15 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
-  </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-        <p>This is my new website which is hosted on GitHub Pages!</p>
-    </main>
-  </body>
+    <title>Election Cell (DGPHQ)</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var $select = $(".1-100");
+            for (i=1;i<=100;i++){
+                $select.append($('<option></option>').val(i).html(i))
+            }
+        });​
+
+    </script>
+    
+</head>
+<body>
+    <div id="content">
+        <h1>चुनाव संबंधी अपराध (संज्ञेय)</h1>
+        <form id="eplan">
+            <label for="district">State*:</label>
+            <select id="district" name="district">
+                
+            </select>
+
+            <label for="constituency_type">Constituency type*:</label>
+            <input type="text" id="constituency_type" name="constituency_type" required>
+
+            <label for="pc">Parliamentary constituency*:</label>
+            <textarea id="pc" name="pc" rows="4" required></textarea>
+
+            <label for="ac">Assembly segment*:</label>
+            <select id="ac" name="ac" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="election_type">Election type*:</label>
+            <input type="text" id="election_type" name="election_type" required></textarea>
+            
+            <label for="year">Year*:</label>
+            <input type="text" id="year" name="year" required></textarea>
+            
+            <label for="ps">Police station*:</label>
+            <input type="text" id="ps" name="ps" required></textarea>
+            
+            <label for="ccn">FIR no.*:</label>
+            <input type="text" id="ccn" name="ccn" required></textarea>
+            
+            <label for="doi">Date of FIR*:</label>
+            <input type="text" id="doi" name="doi" required></textarea>
+            
+            <label for="fir_details">FIR details*:</label>
+            <textarea id="fir_details" name="fir_details" rows="10" required></textarea>
+            
+            <label for="ps_status">Status of case*:</label>
+            <input type="text" id="ps_status" name="ps_status" required></textarea>
+            
+            <label for="court_status">Status of court case*:</label>
+            <input type="text" id="court_status" name="court_status" required></textarea>
+            
+            <label for="final_status_court">Final status of court case*:</label>
+            <input type="text" id="status_court" name="status_court" required></textarea>
+            
+            <label for="nbw">NBW status*:</label>
+            <input type="text" id="nbw" name="nbw" required></textarea>
+            
+            <label for="nbw_status">Status of Execution*:</label>
+            <input type="text" id="nbw_status" name="nbw_status" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
 </html>
